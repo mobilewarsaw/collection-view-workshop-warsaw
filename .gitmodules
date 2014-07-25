@@ -1,0 +1,6 @@
+[submodule "CalendarCollectionViewLayout"]
+	path = CalendarCollectionViewLayout
+	url = https://github.com/paweldudek/CalendarCollectionViewLayout.git
+[submodule "carousel-collection-view-layout"]
+	path = carousel-collection-view-layout
+	url = https://github.com/paweldudek/carousel-collection-view-layout.git
