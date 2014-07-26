@@ -15,6 +15,7 @@
 		510433B0F6AEA328EFF3591D /* StackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5104344D416F3259D4AF9671 /* StackLayout.m */; };
 		5104368AD9B0B2F7636D5C3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510439DACCB1032E85BC5B6D /* CoreGraphics.framework */; };
 		5104369395257A5FF941078B /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51043491F661EB1BE7788EF2 /* StackViewController.m */; };
+		51043750413BE54D9A27E185 /* TransitionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 510432BE205CF8BE03E0C3B2 /* TransitionLayout.m */; };
 		510437FA8CB84C2E721E1FE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5104371E0DE6508E548CE018 /* AppDelegate.m */; };
 		5104381B231A59E62581A506 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5104395E2121A4D73BFC3596 /* Foundation.framework */; };
 		51043951C3E070A4100E5618 /* RandomColorGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 51043076BF0B036B8BFD99A6 /* RandomColorGenerator.m */; };
@@ -25,6 +26,7 @@
 		51043D548C596E3ED7AA5A28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5104370A0CB06528B32E7635 /* UIKit.framework */; };
 		51043D968B21F5E449A88019 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5104300941991CBD01D7FF8B /* GridViewController.m */; };
 		51043F53AB22C998CBA73FDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5104393B028CF96440087833 /* InfoPlist.strings */; };
+		51043F5A120DFB6F225E6A08 /* TransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51043BB60FFB0CAB11B0F06F /* TransitionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		510431D0785A96656D8865C5 /* GridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridLayout.m; sourceTree = "<group>"; };
 		510431E70576D6145B4C6B33 /* StackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackLayout.h; sourceTree = "<group>"; };
 		510431ED67B1056D7DD3EFC5 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
+		51043281D3A01E9C5F620346 /* TransitionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionLayout.h; sourceTree = "<group>"; };
+		510432BE205CF8BE03E0C3B2 /* TransitionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionLayout.m; sourceTree = "<group>"; };
 		5104338CF0A1745230357C8A /* LayoutToLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutToLayoutTests.m; sourceTree = "<group>"; };
 		510433D310FCD2F23870505D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5104344D416F3259D4AF9671 /* StackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackLayout.m; sourceTree = "<group>"; };
@@ -59,10 +63,12 @@
 		5104370A0CB06528B32E7635 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5104371E0DE6508E548CE018 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5104389D1CADF2016B54E4CA /* LayoutToLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayoutToLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		510438C8ACA06AF7E58881E0 /* TransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionManager.h; sourceTree = "<group>"; };
 		5104395E2121A4D73BFC3596 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		510439CE63482E60AE755993 /* LayoutToLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "LayoutToLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		510439D43DF778220D1A3397 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		510439DACCB1032E85BC5B6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		51043BB60FFB0CAB11B0F06F /* TransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionManager.m; sourceTree = "<group>"; };
 		51043DC0FE552C73881BC155 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		51043DCC58303964B1C866D4 /* LayoutToLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LayoutToLayout-Prefix.pch"; sourceTree = "<group>"; };
 		51043E1353BDE26B4466B4A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,11 +111,23 @@
 			path = LayoutToLayout;
 			sourceTree = "<group>";
 		};
+		5104313169694B5B6A3E3A57 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				51043281D3A01E9C5F620346 /* TransitionLayout.h */,
+				510432BE205CF8BE03E0C3B2 /* TransitionLayout.m */,
+				510438C8ACA06AF7E58881E0 /* TransitionManager.h */,
+				51043BB60FFB0CAB11B0F06F /* TransitionManager.m */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		5104327A1C78FA00EB0CAD91 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				51043CCFC8DA53C270BBEDD0 /* Stack */,
 				51043DA5D027972E0EFAB222 /* Grid */,
+				5104313169694B5B6A3E3A57 /* Transition */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -311,6 +329,8 @@
 				510433B0F6AEA328EFF3591D /* StackLayout.m in Sources */,
 				51043B19AAA49D1B21B68B95 /* GridLayout.m in Sources */,
 				51043D968B21F5E449A88019 /* GridViewController.m in Sources */,
+				51043750413BE54D9A27E185 /* TransitionLayout.m in Sources */,
+				51043F5A120DFB6F225E6A08 /* TransitionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

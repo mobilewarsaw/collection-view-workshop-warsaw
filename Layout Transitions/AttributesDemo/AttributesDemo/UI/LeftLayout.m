@@ -19,4 +19,24 @@
     return self;
 }
 
+#pragma mark - Layout hooks
+
+- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {
+    UICollectionViewLayoutAttributes *attributes = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
+    [self shiftAttributesOutOfScreen:attributes];
+    return attributes;
+}
+
+- (UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {
+    UICollectionViewLayoutAttributes *attributes = [super finalLayoutAttributesForDisappearingItemAtIndexPath:itemIndexPath];
+    [self shiftAttributesOutOfScreen:attributes];
+    return attributes;
+}
+
+- (void)shiftAttributesOutOfScreen:(UICollectionViewLayoutAttributes *)attributes {
+    CGPoint center = attributes.center;
+    center.x = -self.itemSize.width/2;
+    attributes.center = center;
+}
+
 @end

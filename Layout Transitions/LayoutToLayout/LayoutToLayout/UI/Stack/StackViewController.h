@@ -5,5 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class TransitionManager;
+
 @interface StackViewController : UICollectionViewController
 @end

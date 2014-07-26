@@ -18,7 +18,6 @@
     self = [super init];
     if (self) {
         self.collectionView = collectionView;
-
         UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(didPinch:)];
         [self.collectionView addGestureRecognizer:pinch];
     }
@@ -79,13 +78,12 @@
     [[transitionContext containerView] addSubview:[toCollectionViewController view]];
 
     self.transitionLayout = (TransitionLayout *) [fromCollectionViewController.collectionView startInteractiveTransitionToCollectionViewLayout:toCollectionViewController.collectionViewLayout
-                                                                                                                                       completion:^(BOOL didFinish, BOOL didComplete) {
+                                                                                                                                    completion:^(BOOL didFinish, BOOL didComplete) {
             [self.transitionContext completeTransition:didComplete];
             self.transitionLayout = nil;
             self.transitionContext = nil;
             self.startedInteraction = NO;
         }];
-
 }
 
 @end

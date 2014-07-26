@@ -6,11 +6,14 @@
 #import "StackLayout.h"
 #import "RandomColorGenerator.h"
 #import "GridViewController.h"
+#import "TransitionManager.h"
+#import "TransitionLayout.h"
 
 NSString *const CellId = @"CellId";
 
-@interface StackViewController () <UINavigationControllerDelegate>
+@interface StackViewController () <UINavigationControllerDelegate, TransitionManagerDelegate>
 @property(nonatomic, strong) NSArray *colors;
+@property(nonatomic, strong) TransitionManager *transitionManager;
 @end
 
 @implementation StackViewController
@@ -32,6 +35,9 @@ NSString *const CellId = @"CellId";
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CellId];
+    self.transitionManager = [[TransitionManager alloc] initWithCollectionView:self.collectionView];
+    self.transitionManager.delegate = self;
+    self.navigationController.delegate = self;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -44,6 +50,44 @@ NSString *const CellId = @"CellId";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellId forIndexPath:indexPath];
     cell.backgroundColor = self.colors[(NSUInteger) indexPath.item];
     return cell;
+}
+
+- (UICollectionViewTransitionLayout *)collectionView:(UICollectionView *)collectionView
+                        transitionLayoutForOldLayout:(UICollectionViewLayout *)fromLayout
+                                           newLayout:(UICollectionViewLayout *)toLayout {
+    return [[TransitionLayout alloc] initWithCurrentLayout:fromLayout nextLayout:toLayout];
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self presentGridController];
+}
+
+- (void)presentGridController {
+    GridViewController *gridViewController = [GridViewController new];
+    gridViewController.useLayoutToLayoutNavigationTransitions = YES;
+    [self.navigationController pushViewController:gridViewController animated:YES];
+}
+
+#pragma mark - TransitionManagerDelegate
+
+- (void)managerDidStartInteractiveTransition:(TransitionManager *)transitionManager {
+    [self presentGridController];
+}
+
+#pragma mark - UINavigationControllerDelegate
+
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC {
+    return self.transitionManager.startedInteraction ? self.transitionManager : nil;
+}
+
+- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                          interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>)animationController {
+    return animationController == self.transitionManager ? self.transitionManager : nil;
 }
 
 @end
