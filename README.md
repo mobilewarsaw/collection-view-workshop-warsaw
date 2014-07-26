@@ -16,7 +16,7 @@ Collection View Workshop
 	* [Slides]()
 	* [Project](https://github.com/literator/UICollectionViewWorkshop)
 * Custom Collection View Layouts
-	* [Slides](https://github.com/mobile-warsaw/collection-view-workshop-warsaw/blob/master/custom%20layouts.pdf)
+	* [Slides](https://speakerdeck.com/paweldudek/custom-collection-view-layouts)
 	* [Carousel Project](https://github.com/paweldudek/carousel-collection-view-layout)
 	* [Calendar Project](https://github.com/paweldudek/CalendarCollectionViewLayout)
 * Layout Transitions
