@@ -14,7 +14,7 @@ Collection View Workshop
 
 * Introduction to Collection Views
 	* [Slides]()
-	* [Project]()
+	* [Project](https://github.com/literator/UICollectionViewWorkshop)
 * Custom Collection View Layouts
 	* [Slides](https://github.com/mobile-warsaw/collection-view-workshop-warsaw/blob/master/custom%20layouts.pdf)
 	* [Carousel Project](https://github.com/paweldudek/carousel-collection-view-layout)
