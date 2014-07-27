@@ -13,7 +13,7 @@ Collection View Workshop
 ### Materials
 
 * Introduction to Collection Views
-	* [Slides]()
+	* [Slides](https://speakerdeck.com/maciejoczko/uicollectionview-introduction)
 	* [Project](https://github.com/literator/UICollectionViewWorkshop)
 * Custom Collection View Layouts
 	* [Slides](https://speakerdeck.com/paweldudek/custom-collection-view-layouts)
